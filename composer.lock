@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fac753ae2702317b354e7eb283f28cbc",
+    "content-hash": "35010c65d88ffa3481f2fd0e54149e3f",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -109,6 +109,49 @@
                 }
             ],
             "time": "2020-08-18T23:57:15+00:00"
+        },
+        {
+            "name": "d20201105/gen",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./gen",
+                "reference": "583154e65e3a816fcea128fe85da3c978d3c73a0"
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^5.5",
+                "phpunit/phpunit": "^9.3"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "D20201105\\Gen\\GenServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "D20201105\\Gen\\": "src/"
+                },
+                "files": [
+                    "utils.php"
+                ]
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "D20201105\\Gen\\Tests\\": "tests"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -6862,7 +6905,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "d20201105/gen": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
